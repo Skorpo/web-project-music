@@ -1,6 +1,6 @@
 <?php
 
-require_once("login.php");
+require_once("header.php");
 
 $DB_USERNAME = "salim04507";
 $DB_DATABASE = "webgroup2_default";
@@ -26,48 +26,34 @@ if (file_exists($dbpwdPath)) {
 }
 
 if ($_SESSION['loggedin'] == true)
-	{	
+{	
 		echo "<a href='logout.php'>Logout</a>";
-	}
-else
-{
-	if ($_SERVER['REQUEST_URI'] != "/~webgroup2/login.php")
-	{
-		session_start();
-
-		$sql = "SELECT id FROM users 
-						WHERE username = '" . $_SESSION['username'] . "'";
-						
-				if($result = $db->query($sql))
-				{
-					if($result->num_rows > 0)
-					{
-						while ($row = $result->fetch_array())
-						{
-							echo $row["id"];
-						}
-						$result->free();
-					} 
-					else
-					{
-						echo "No records matching your query were found.";
-					}
-				} 
-				else
-				{
-					echo "ERROR: Could not execute $sql. " . $db->error;
-				}
-
-		if ($_SESSION['loggedin'] == true)
-		{	
-			echo "<a href='logout.php'>Logout</a>";
-		}
-		else
-		{
-			header('Location: '. "/~webgroup2/login.php", true, 302);
-		}
-	}
 }
+// else
+// {
+	// $sql = "SELECT id FROM users 
+					// WHERE username = '" . $_SESSION['username'] . "'";
+						
+			// if($result = $db->query($sql))
+			// {
+				// if($result->num_rows > 0)
+				// {
+					// while ($row = $result->fetch_array())
+					// {
+						// echo $row["id"];
+					// }
+					// $result->free();
+				// } 
+				// else
+				// {
+					// echo "No records matching your query were found.";
+				// }
+			// } 
+			// else
+			// {
+				// echo "ERROR: Could not execute $sql. " . $db->error;
+			// }
+// }
 
 
 ?>
