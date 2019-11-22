@@ -1,1 +1,97 @@
+body{
+    /*Change the font to something less painful to prototype with*/
+    font-family: sans-serif;
 
+    /*Change the colors to a dark theme*/
+    color:whitesmoke;
+    background: rgb(37, 37, 37);
+
+    /*Format the body to take up the whole page*/
+    margin: 0;
+    height: 100%; 
+    width: 100%;
+}
+
+
+
+/*Styling for the pads*/
+.pad{
+
+    /*Allow spacing and sizing to be responsive*/
+    background: black;
+    width:20%;
+    height:20%;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(+45%);
+    
+}
+
+/*Div holding the pads*/
+#pad_container{
+ 
+    /*Using vw to enable a responsive square*/
+    width:25vw;
+    height:25vw;
+    margin:1vw;
+
+    background: cornflowerblue;
+    display: inline-block;
+
+    vertical-align:top;
+    
+}
+
+/*styles the sidebar*/
+#sidebar_container{
+    width:25vw;
+    height:25vw;
+    background: green;
+    display: inline-block;
+    vertical-align:top;
+    text-align: center;
+    margin:1vw;
+}
+
+
+/*Styles the playback menu*/
+#playback_menu{
+    background: blue;
+    width:95%;
+    height:45%;
+    margin:2.5%;
+}
+
+/*Styles the other menu*/
+#other_menu{
+     background: coral;
+     width:95%;
+     height:45%;
+     margin:2.5%;
+
+}
+
+/*Styles the upper container housing the above menus*/
+#upper_container{
+width:100%;
+text-align: center;
+}
+
+/*Styles the sample loader*/
+#samplebar{
+    width:52.5vw;
+    height:5vw; 
+    background: cyan;
+    display: inline-block;
+    margin-top: 10px;
+
+}
+
+#samplebar_container{
+    text-align: center;
+    
+}
+
+h1{
+    text-align: center;
+}
