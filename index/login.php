@@ -1,20 +1,21 @@
 <?php
 
-session_start();
+require_once('header.php');
 
 $baseurl = "/~webgroup2/";
-$homepage = "/~webgroup2/index.html";
+$homepage = "/~webgroup2/index.php";
 
 $logged_in = false;
 
 $msg = "Login to access this area";
 
-if (isset($_SESSION['username'])) 
-{
-	//already logged in
-	header("Location: " . $homepage, true, 302);
-}
-elseif (isset($_POST['username']) && isset($_POST['password'])) 
+// if (isset($_SESSION['username'])) 
+// {
+	// //already logged in
+	// header("Location: " . $homepage, true, 302);
+// }
+// else
+if (isset($_POST['username']) && isset($_POST['password'])) 
 {
 	$sql = sprintf("
 		SELECT username
@@ -66,12 +67,11 @@ elseif (isset($_POST['username']) && isset($_POST['password']))
 		
 		<div class="loginform centered">
 		<form method="post">
-			
 			<div class="key"></div>
 			<h3><?php echo $msg; ?></h3>
-			<label for="userid">
+			<label for="username">
 				Username:
-				<input name="userid" type="text" value="" id="userid">
+				<input name="username" type="text" value="" id="username">
 			</label>
 			<p>
 			<label for="password">
