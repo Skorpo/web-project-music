@@ -1,0 +1,85 @@
+
+<?php 
+        $userValid=false;
+
+        if(!isset($_SESSION['userID'])){
+            $_SESSION['userID']="none";
+        }else{
+        }
+
+        if(isset($_POST['userID'])){
+            if($_POST['userID']==$_SESSION['userID']){
+                    $_SESSION['userAttempt']=$_POST['userID'];
+                    $_userValid=true;
+                }else{
+                    $_userValid=false;
+            }
+        }
+
+        if(isset($_POST['password'])){
+            if(md5($_POST['password'])==$_SESSION['password']&&$_userValid=true){
+                    $_SESSION['passAttempt']=$_POST['password'];
+                    print("<style>#loginContainer{display:hidden;}<style>");
+                }else{
+            }
+        }
+
+?>
+
+
+
+<div id = 'loginContainer'>
+
+    <div id ='loginInput'>
+        <div>
+        <p>PLEASE LOGIN</p>
+            <form method = "post" action = "" id = "loginForm">
+                <input type ="text" name ="userID" placeholder="Username?"required>
+                <input type ="password" name ="password" placeholder="Password?"required>
+                <input type ="submit" ="Login" value="Login">
+        </div>
+    </div>
+
+   
+    
+
+        <style>
+            p{
+                color:black;
+                font-size:3em;
+                text-align: center;
+                padding-top: 15px;
+            }
+            #loginInput{
+                width:60%;
+                height:20%;
+                background-color:white;
+
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                position: absolute;
+                margin: auto;
+
+                border-radius:35px;
+                text-align: center;
+            }
+            #loginContainer{
+                width:100%;
+                height:100%;
+                position:fixed;     
+                background-color:rgba(0,0,0,0.85);
+
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        </style>
+
+
+
+
+</div>
+
