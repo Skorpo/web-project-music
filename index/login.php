@@ -9,13 +9,12 @@ $logged_in = false;
 
 $msg = "Login to access this area";
 
-// if (isset($_SESSION['username'])) 
-// {
-	// //already logged in
-	// header("Location: " . $homepage, true, 302);
-// }
-// else
-if (isset($_POST['username']) && isset($_POST['password'])) 
+if (isset($_SESSION['username'])) 
+{
+	//already logged in
+	header("Location: " . $homepage, true, 302);
+}
+elseif (isset($_POST['username']) && isset($_POST['password'])) 
 {
 	$sql = sprintf("
 		SELECT username
