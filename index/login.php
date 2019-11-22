@@ -1,6 +1,6 @@
 <?php
 
-require_once('header.php');
+include_once('header.php');
 
 $baseurl = "/~webgroup2/";
 $homepage = "/~webgroup2/index.php";
@@ -31,7 +31,7 @@ elseif (isset($_POST['username']) && isset($_POST['password']))
 			
 			//Update users lastlogin
 			//$db->query("UPDATE users SET lastlogin=NOW() WHERE username = '". $row['username']  ."'");
-			$_SESSION['uesrname'] = $_POST['username'];
+			$_SESSION['username'] = $_POST['username'];
 			$_SESSION['loggedin'] = true;
 
 			header("Location: " . $homepage, true, 302);
