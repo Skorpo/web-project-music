@@ -32,37 +32,45 @@ body{
 
 /*Styling for the pads*/
 
-
+.pad:active{
+	 background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 .pad{
 
 
 
     /*Allow spacing and sizing to be responsive*/
-
-    
+	margin: 4px;
+    display: flex; 
 
     width:20%;
 
-    height:20%;
+	height:20%;
 
     display: inline-block;
 
     top: 50%;
 
-    transform: translateY(+45%);
+    transform: translateY(-10%);
 	
 	outline: none;
 
 	cursor: pointer;
 
-	padding: 15px 32px;
+	padding: 16px 32px;
 
 	border-radius: 4px;
 
 	font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 
 	text-align: center;
+	
+	border: none;
+	
+	box-shadow: 0 9px #999;
 
     
 
@@ -81,40 +89,37 @@ body{
     right: 0;
     z-index: -1; // Set behind primary button
   }
-  @keyframes glow {
-  0% {
-    background: $color-primary;
-  }
-  25% {
-    background: $color-primary-light;
-  }
-  100% {
-    background: $color-primary;
-  }
-}
-  .pad::active{
-	  animation: glow 1s ease-in infinite;
-	  box-shadow: 0 5px #666;
-	transform: translateY(4px);
-	  
-  }
+   
   
-#pad1::before{background: #DC143C;}
-#pad2::before{background: #DC143C;}
-#pad3::before{background: #DC143C;}
-#pad4::before{background: #DC143C;}
-#pad5::before{background: blue;}
-#pad6::before{background: blue;}
-#pad7::before{background: blue;}
-#pad8::before{background: blue;}
-#pad9::before{background: lightGreen;}
-#pad10::before{background: lightGreen;}
-#pad11::before{background: lightGreen;}
-#pad12::before{background: lightGreen;}
-#pad13::before{background: #FF1493;}
-#pad14::before{background: #FF1493;}
-#pad15::before{background: #FF1493;}
-#pad16::before{background: #FF1493;}
+  
+
+#pad1:before{
+	background: #DC143C;
+	box-shadow: 0 5px red;
+	}
+#pad2:before{background: #DC143C;
+box-shadow: 0 5px red;}
+#pad3:before{background: #DC143C;
+box-shadow: 0 5px red;}
+#pad4:before{background: #DC143C;
+box-shadow: 0 5px red;}
+#pad5:before{background: blue;
+}
+#pad6:before{background: blue;}
+#pad7:before{background: blue;}
+#pad8:before{background: blue;}
+#pad9:before{background: lightGreen;}
+#pad10:before{background: lightGreen;}
+#pad11:before{background: lightGreen;}
+#pad12:before{background: lightGreen;}
+#pad13:before{background: #FF1493;
+box-shadow: 0 5px pink;}
+#pad14:before{background: #FF1493;
+box-shadow: 0 5px pink;}
+#pad15:before{background: #FF1493;
+box-shadow: 0 5px pink;}
+#pad16:before{background: #FF1493;
+box-shadow: 0 5px pink;}
 
 
 
@@ -157,7 +162,7 @@ header {
 
   padding: 10px;
 
-  color: white;
+  color: black;
 
   
 
@@ -209,7 +214,7 @@ header {
 
 #pad_container{
 
- 
+	display: flex; 
 
     /*Using vw to enable a responsive square*/
 
@@ -219,7 +224,7 @@ header {
 
     margin:1vw;
 
-
+	padding: 16px 16px 16px 16px;
 
     background: rgb(60,60,60);
 
