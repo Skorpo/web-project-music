@@ -1,141 +1,354 @@
 body{
+
     /*Change the font to something less painful to prototype with*/
+
     font-family: sans-serif;
 
+
+
     /*Change the colors to a dark theme*/
-    color:whitesmoke;
-    background-image: white;
+
+    color:black;
+
+    
+
+
 
     /*Format the body to take up the whole page*/
+
     margin: 0;
+
     height: 100%; 
+
     width: 100%;
+
 }
+
+
+
+
 
 
 
 /*Styling for the pads*/
 
+
+
 .pad{
 
+
+
     /*Allow spacing and sizing to be responsive*/
-    background-image: white;
+
+    
+
     width:20%;
+
     height:20%;
+
     display: inline-block;
+
     top: 50%;
+
     transform: translateY(+45%);
 	
+	outline: none;
+
+	cursor: pointer;
+
 	padding: 15px 32px;
+
 	border-radius: 4px;
+
 	font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+
 	text-align: center;
+
     
+
 }
+.pad::before {
+   
+    border-radius: inherit;
+    content: '';
+    filter: blur(10px); // Controls the extent of the initial glow
+    opacity: .75;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1; // Set behind primary button
+  }
+  @keyframes glow {
+  0% {
+    background: $color-primary;
+  }
+  25% {
+    background: $color-primary-light;
+  }
+  100% {
+    background: $color-primary;
+  }
+}
+  .pad::active{
+	  animation: glow 1s ease-in infinite;
+	  box-shadow: 0 5px #666;
+	transform: translateY(4px);
+	  
+  }
+  
+#pad1::before{background: #DC143C;}
+#pad2::before{background: #DC143C;}
+#pad3::before{background: #DC143C;}
+#pad4::before{background: #DC143C;}
+#pad5::before{background: blue;}
+#pad6::before{background: blue;}
+#pad7::before{background: blue;}
+#pad8::before{background: blue;}
+#pad9::before{background: lightGreen;}
+#pad10::before{background: lightGreen;}
+#pad11::before{background: lightGreen;}
+#pad12::before{background: lightGreen;}
+#pad13::before{background: #FF1493;}
+#pad14::before{background: #FF1493;}
+#pad15::before{background: #FF1493;}
+#pad16::before{background: #FF1493;}
+
+
+
+#pad1{	background-color: red;}
+#pad2{	background-color: red;}
+#pad3{	background-color: red;}
+#pad4{	background-color: red;}
+#pad5{	background-color: lightblue;}
+#pad6{	background-color: lightblue;}
+#pad7{	background-color: lightblue;}
+#pad8{	background-color: lightblue;}
+#pad9{	background-color: green;}
+#pad10{	background-color: green;}
+#pad11{	background-color: green;}
+#pad12{	background-color: green;}
+#pad13{	background-color: purple;}
+#pad14{	background-color: purple;}
+#pad15{	background-color: purple;}
+#pad16{	background-color: purple;}
+
+
+
 .tab{
+
 	overflow: hidden;
+
   border: 1px solid #ccc;
+
   background-color: grey;
 
 
+
+
+
 }
+
 header {
+
   
+
   padding: 10px;
+
   color: white;
+
   
+
 }
+
 .tab .topbottom{
+
 	
+
 	background-color: grey;
+
   border: none;
+
   color: white;
+
   padding: 15px 32px;
+
   text-align: center;
+
   text-decoration: none;
+
   display: inline-block;
+
   font-size: 16px;
+
   cursor: pointer;
+
   transition: all 0.5s;
+
   float: left;
+
   
+
   display: flex; 
+
   justify-content: center;
+
   
+
 }
+
+
+
+
 
 
 
 /*Div holding the pads*/
+
 #pad_container{
+
  
+
     /*Using vw to enable a responsive square*/
+
     width:25vw;
+
     height:25vw;
+
     margin:1vw;
 
-    background: grey;
+
+
+    background: rgb(60,60,60);
+
     display: inline-block;
 
+
+
     vertical-align:top;
+
 	border-radius: 4px;
+
     
+
 }
+
+
 
 /*styles the sidebar*/
+
 #sidebar_container{
+
     width:25vw;
+
     height:25vw;
-    background: grey;
+
+    background: rgb(60,60,60);
+
     display: inline-block;
+
     vertical-align:top;
+
     text-align: center;
+
     margin:1vw;
+
 	border-radius: 4px;
+
 }
+
+
+
 
 
 /*Styles the playback menu*/
+
 #playback_menu{
+
     background: white;
+
     width:95%;
+
     height:45%;
+
     margin:2.5%;
+
 	border-radius: 4px;
+
 }
+
+
 
 /*Styles the other menu*/
+
 #other_menu{
+
      background: white;
+
      width:95%;
+
      height:45%;
+
      margin:2.5%;
+
 	 border-radius: 4px;
 
+
+
 }
+
+
 
 /*Styles the upper container housing the above menus*/
+
 #upper_container{
+
 width:100%;
+
 text-align: center;
+
 }
+
+
 
 /*Styles the sample loader*/
+
 #samplebar{
+
     width:52.5vw;
+
     height:5vw; 
-    background: grey;
+
+    background: rgb(60,60,60);
+
     display: inline-block;
+
     margin-top: 10px;
+
 	border-radius: 4px;
 
+
+
 }
+
+
+
+
 
 #samplebar_container{
+
     text-align: center;
+
     
+
 }
 
+
+
 h1{
+
     text-align: center;
+
 }
