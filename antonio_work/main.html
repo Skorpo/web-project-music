@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Index</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+
+<body>
+
+    <!--Sample title-->
+
+
+
+    <header>
+
+        <div class="tab">
+
+            <button id="LOGIN" type="button" class="topbottom">Login</button>
+
+            <button id="LOGOUT" type="button" class="topbottom">Logout</button>
+
+            <button id="SIGNUP" type="button" class="topbottom">SignUp</button>
+
+            <button id="INSTRUCTIONS" type="button" onclick="displayInstructions()"
+                class="topbottom">Instructions</button>
+
+        </div>
+
+    </header>
+
+
+        <div id="app_container">
+
+            <div id="upper_container">
+
+                <!--Pad container contains all of the pads-->
+
+                <div id="pad_container">
+
+
+
+                    <button id="pad1" class="pad">1</button>
+
+                    <button id="pad2" class="pad">2</button>
+
+                    <button id="pad3" class="pad">3</button>
+
+                    <button id="pad4" class="pad">4</button>
+
+
+
+                    <button id="pad5" class="pad">5</button>
+
+                    <button id="pad6" class="pad">6</button>
+
+                    <button id="pad7" class="pad">7</button>
+
+                    <button id="pad8" class="pad">8</button>
+
+
+
+                    <button id="pad9" class="pad">9</button>
+
+                    <button id="pad10" class="pad">10</button>
+
+                    <button id="pad11" class="pad">11</button>
+
+                    <button id="pad12" class="pad">12</button>
+
+
+
+                    <button id="pad13" class="pad">13</button>
+
+                    <button id="pad14" class="pad">14</button>
+
+                    <button id="pad15" class="pad">15</button>
+
+                    <button id="pad16" class="pad">16</button>
+
+
+
+                </div>
+
+                <div id="sidebar_container">
+
+                    <div id="playback_menu"></div>
+
+                    <div id="other_menu"></div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <div id="play/record_container">
+                <button id="recordButton" class="padRecord" onclick="checkRegister()">rec</button>
+                <button id="playButton" class="playRecord">play</button>
+                <button id="editButton" class="padEdit" onclick="change">edit</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- <div id="samplebar_container">
+    <div id = "samplebar"></div>
+</div> -->
+    <div id="menuBar_wrapper">
+        <div id="menuBar">
+            <h1>S A M P L E S</h1>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="instructionsMenu">
+            <h1>Instructions</h1>
+            <div class="thinDivider"></div>
+            <p>Welcome to our app!</p>
+            <p>To play a sound, click on any pad.</p>
+            <p>To record, press record</p>
+            <p>To access the edit menu, press left shift, or press the corresponding button.</p>
+            <button onclick="changeInstructionVisibility(false)">close</button>
+        </div>
+
+    <div id = "registerModal">
+        <h1>You need to register to do that!</h1>
+        <p>In order to get full access, to the site, you need to register.</p>
+        <button onclick= "closeRegisterModal()">Close</button>
+    </div>
+    <script src="antonio.js" type="text/javascript" defer></script>
+
+    <div id = "recordModal">
+        <h1>SAVE BEAT</h1>
+        <input type="text" name="beatName"><br>
+        <button onclick= "saveBeat()">Save</button>
+    </div>
+   
+
+
+</body>
+
+
+
+</html>
