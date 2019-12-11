@@ -1,29 +1,29 @@
-body{
+body
+{
 
     /*Change the font to something less painful to prototype with*/
 
-    font-family: sans-serif;
+    
 
 
 
     /*Change the colors to a dark theme*/
 
-    color:black;
-
     
 
+    
+	background: #262626;
 
 
     /*Format the body to take up the whole page*/
 
     margin: 0;
 
-    height: 100%; 
+    height: 100%;
 
     width: 100%;
 
 }
-
 
 
 
@@ -44,8 +44,9 @@ body{
 
     /*Allow spacing and sizing to be responsive*/
 	margin: 4px;
-    display: flex; 
-
+    
+	display: flex; 
+	
     width:20%;
 
 	height:20%;
@@ -71,15 +72,30 @@ body{
 	border: none;
 	
 	box-shadow: 0 9px #999;
+	
+	justify-content: center;
+
 
     
+	
+}
 
+
+@media screen and (max-width: 1060px) {
+    #primary { width:10%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
 }
 .pad::before {
    
     border-radius: inherit;
     content: '';
-    filter: blur(10px); // Controls the extent of the initial glow
+    filter: blur(10px); 
     opacity: .75;
     position: absolute;
     transition: all .3s ease-in-out;
@@ -87,7 +103,7 @@ body{
     height: 100%;
     top: 0;
     right: 0;
-    z-index: -1; // Set behind primary button
+    z-index: -1; 
   }
    
   
@@ -123,22 +139,38 @@ box-shadow: 0 5px pink;}
 
 
 
-#pad1{	background-color: red;}
-#pad2{	background-color: red;}
-#pad3{	background-color: red;}
-#pad4{	background-color: red;}
-#pad5{	background-color: lightblue;}
-#pad6{	background-color: lightblue;}
-#pad7{	background-color: lightblue;}
-#pad8{	background-color: lightblue;}
-#pad9{	background-color: green;}
-#pad10{	background-color: green;}
-#pad11{	background-color: green;}
-#pad12{	background-color: green;}
-#pad13{	background-color: purple;}
-#pad14{	background-color: purple;}
-#pad15{	background-color: purple;}
-#pad16{	background-color: purple;}
+#pad1{	background-color: red;
+position: sticky;}
+#pad2{	background-color: red;
+position: sticky;}
+#pad3{	background-color: red;
+position: sticky;}
+#pad4{	background-color: red;
+position: sticky;}
+#pad5{	background-color: lightblue;
+position: sticky;}
+#pad6{	background-color: lightblue;
+position: sticky;}
+#pad7{	background-color: lightblue;
+position: sticky;}
+#pad8{	background-color: lightblue;
+position: sticky;}
+#pad9{	background-color: green;
+position: sticky;}
+#pad10{	background-color: green;
+position: sticky;}
+#pad11{	background-color: green;
+position: sticky;}
+#pad12{	background-color: green;
+position: sticky;}
+#pad13{	background-color: purple;
+position: sticky;}
+#pad14{	background-color: purple;
+position: sticky;}
+#pad15{	background-color: purple;
+position: sticky;}
+#pad16{	background-color: purple;
+position: sticky;}
 
 
 
@@ -214,10 +246,11 @@ header {
 
 #pad_container{
 
+	
 	display: flex; 
 
-    /*Using vw to enable a responsive square*/
-
+    position: fixed;
+	
     width:25vw;
 
     height:25vw;
@@ -227,10 +260,6 @@ header {
 	padding: 16px 16px 16px 16px;
 
     background: rgb(60,60,60);
-
-    display: inline-block;
-
-
 
     vertical-align:top;
 
@@ -263,7 +292,6 @@ header {
 	border-radius: 4px;
 
 }
-
 
 
 
@@ -356,4 +384,92 @@ h1{
 
     text-align: center;
 
+}
+
+
+.tab .Boomer
+{
+	
+
+  
+
+  
+
+  padding: 10px 10px;
+
+  
+
+  text-decoration: none;
+
+  display: inline-block;
+
+	position: sticky;
+	left: 50%;
+  
+
+  
+
+  
+
+  
+
+  
+
+  justify-content: center;
+	
+}
+
+.Boomer span{
+		color:#fff;
+		font-family: verdana;
+		font-size: 20px;
+		color: #fff;
+		display:inline-block;
+		animation: animate 2s linear infinite;
+		width: 24 px;
+		height: 24px;
+		text-align: center; line-height: 24px;
+		border: 1px solid rgba(255, 255, 255, .40);
+		margin: 0 -2.5px;
+	
+}
+@keyframes animate
+{
+	0%
+	{
+		color:#f00;
+		box-shadow: 0 2px 10px rgba(255, 0, 0, 1);
+		border: 1px solid rgba(255,0,0,1);
+	}
+	33%
+	{
+		color:#0f0;
+		box-shadow: 0 2px 10px rgba(0, 255, 0, 1);
+		border: 1px solid rgba(0,255,0,1);
+	}
+	66%
+	{
+		color:#00f;
+		box-shadow: 0 2px 10px rgba(0, 0, 255, 1);
+		border: 1px solid rgba(0,0,255,1);
+	}
+	100%
+	{
+		color:#f00;
+		box-shadow: 0 2px 10px rgba(255, 0, 0, 1);
+		border: 1px solid rgba(255,0,0,1);
+	}
+	80%
+	{
+		color:#f00;
+		box-shadow: 0 2px 10px rgba(255, 0, 0, 1);
+		border: 1px solid rgba(255,0,0,1);
+	}
+	100%
+	{
+		color:#f00;
+		box-shadow: 0 2px 10px rgba(255, 0, 0, 1);
+		border: 1px solid rgba(255,0,0,1);
+	}
+	
 }
