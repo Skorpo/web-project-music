@@ -26,7 +26,12 @@ body
 }
 
 
-
+.playfeatures{
+	
+	margin: 10px 10px 10px 10px;
+	padding: 16px 32px;
+	align-items: -webkit-center;
+}
 
 
 
@@ -45,13 +50,13 @@ body
     /*Allow spacing and sizing to be responsive*/
 	margin: 4px;
     
-	display: flex; 
 	
-    width:20%;
+	
+    width:5vw;
 
-	height:20%;
+	height:5vw;
 
-    display: inline-block;
+    
 
     top: 50%;
 
@@ -79,24 +84,81 @@ body
     
 	
 }
-
-
-@media screen and (max-width: 1060px) {
-    #primary { width:10%; }
-    #secondary { width:30%; margin-left:3%;}  
+.playRecord{
+	font-size: .7em;
+	height: 60px;
+	width: 60px;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align:top;
+	text-align:center;
+	cursor: pointer;
+	}
+.padRecord{
+	font-size: .7em;
+	height: 60px;
+	width: 60px;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align:top;
+	text-align:center;
+	cursor: pointer;
+}
+.padEdit{
+	font-size: .7em;
+	height: 60px;
+	width: 60px;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align:top;
+	text-align:center;
+	cursor: pointer;
 }
 
-/* Media Queries: Tabled Portrait */
-@media screen and (max-width: 768px) {
-    #primary { width:100%; }
-    #secondary { width:100%; margin:0; border:none; }
+#playrecord_container{
+	display: grid;
+	grid-template-columns: auto ;
+	grid-gap: 10px;
+    float: center;
+  padding: 10px;
+  width:20%;
 }
+#playrecord_container > div {
+  
+  text-align: center;
+  padding: 20px 0;
+  
+}
+
+
+
+
+.playrecord_container{
+	
+  display: grid;
+  grid-template-columns: auto ;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+	
+}
+.playrecord_container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
 .pad::before {
    
     border-radius: inherit;
     content: '';
     filter: blur(10px); 
-    opacity: .75;
+    opacity: 1.00;
     position: absolute;
     transition: all .3s ease-in-out;
     width: 100%;
@@ -140,37 +202,37 @@ box-shadow: 0 5px pink;}
 
 
 #pad1{	background-color: red;
-position: sticky;}
+}
 #pad2{	background-color: red;
-position: sticky;}
+}
 #pad3{	background-color: red;
-position: sticky;}
+}
 #pad4{	background-color: red;
-position: sticky;}
+}
 #pad5{	background-color: lightblue;
-position: sticky;}
+}
 #pad6{	background-color: lightblue;
-position: sticky;}
+}
 #pad7{	background-color: lightblue;
-position: sticky;}
+}
 #pad8{	background-color: lightblue;
-position: sticky;}
+}
 #pad9{	background-color: green;
-position: sticky;}
+}
 #pad10{	background-color: green;
-position: sticky;}
+}
 #pad11{	background-color: green;
-position: sticky;}
+}
 #pad12{	background-color: green;
-position: sticky;}
+}
 #pad13{	background-color: purple;
-position: sticky;}
+}
 #pad14{	background-color: purple;
-position: sticky;}
+}
 #pad15{	background-color: purple;
-position: sticky;}
+}
 #pad16{	background-color: purple;
-position: sticky;}
+}
 
 
 
@@ -247,23 +309,25 @@ header {
 #pad_container{
 
 	
-	display: flex; 
-
-    position: fixed;
+	
 	
     width:25vw;
 
     height:25vw;
 
-    margin:1vw;
+    margin-left:12vw;
+	
+	margin-top:5vw;
 
-	padding: 16px 16px 16px 16px;
+	padding: 16px 16px 16px;
 
     background: rgb(60,60,60);
 
-    vertical-align:top;
+   
 
 	border-radius: 4px;
+	
+	float:left;
 
     
 
@@ -283,11 +347,11 @@ header {
 
     display: inline-block;
 
-    vertical-align:top;
+    
 
     text-align: center;
 
-    margin:1vw;
+    margin:5.5vw;
 
 	border-radius: 4px;
 
@@ -403,7 +467,7 @@ h1{
 
   display: inline-block;
 
-	position: sticky;
+	
 	left: 50%;
   
 
@@ -472,4 +536,72 @@ h1{
 		border: 1px solid rgba(255,0,0,1);
 	}
 	
+}
+@media screen and (max-width: 1200px) {
+    .pad{width:20%;
+	height:20%;	
+	margin: 0px;
+	padding: 0px 4px;}  
+	#sidebar_container{
+
+    width:100%;
+
+    height:100%;
+
+    }
+	#playrecord_container{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 10px;
+    float: center;
+  padding: 2px;
+  width:20%;
+}
+	pad_container{
+		padding-left: 5px ;
+		padding-right: 5px ;
+		padding-bottom: 5px ;
+		width:90px;
+
+		height:90px;
+	}
+	.pad::before{
+		filter: blur(10px);
+		width: 100%;
+		height: 100%;
+		opacity: 1.00;
+	}
+	.playRecord{
+	font-size: .7em;
+	height: 30px;
+	width: 30px;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align:top;
+	text-align:center;
+	cursor: pointer;
+	}
+.padRecord{
+	font-size: .7em;
+	height: 30px;
+	width: 30px;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align:top;
+	text-align:center;
+	cursor: pointer;
+}
+.padEdit{
+	font-size: .7em;
+	height: 30px;
+	width: 30px;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align:top;
+	text-align:center;
+	cursor: pointer;
+}
 }
