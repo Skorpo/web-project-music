@@ -1,10 +1,12 @@
-# Web-Project-Music
+# Phantasm
 
-The project is located at <https://tophat.sunywcc.edu/~webgroup2/index.php> and is hosted on Top Hat
+Phantasm is located at <https://tophat.sunywcc.edu/~webgroup2/index.php> and is hosted on Top Hat
+
+
 
 ## I ) Website Description
 
-Web-Project-Music is an online music production environment used to create custom instrumentals by utilizing our virtual drum machine.
+Phantasm is an online music production environment used to create custom instrumentals by utilizing our virtual drum machine.
 
 ## II ) Supported Mechanics
 
