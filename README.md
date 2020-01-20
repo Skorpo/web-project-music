@@ -2,7 +2,7 @@
 
 Phantasm is located at <https://tophat.sunywcc.edu/~webgroup2/index.php> and is hosted on Top Hat
 
-
+![Front End](./design/Phantasm)
 
 ## I ) Website Description
 
